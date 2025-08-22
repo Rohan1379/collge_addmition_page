@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f6ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: auto;  
+            background-color: #ffffff;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Admission Registration Form</h2>
+
+        <form onsubmit="goToThankYouPage(event)">
+            <label for="name">First Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your first name" required>
+
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" placeholder="Enter your surname" required>
+
+            <label for="percentage">10th Percentage:</label>
+            <input type="text" id="percentage" name="percentage" placeholder="Enter your 10th percentage" required>
+
+            <label for="category">Select Category:</label>
+            <select name="category" id="category">
+                <option value="Open">Open</option>
+                <option value="OBC">OBC</option>
+                <option value="SC">SC</option>
+                <option value="ST">ST</option>
+                <option value="EWS">EWS</option>
+                <option value="Vj">Vj</option>
+                <option value="Nt-c">Nt-c</option>
+                <option value="Nt-b">Nt-b</option>
+                <option value="Nt-a">Nt-a</option>
+            </select>
+
+            <label>Class:</label>
+            <input type="radio" id="class11" name="class" value="Class XI">
+            <label for="class11" style="display: inline;">Class XI</label>
+
+            <input type="radio" id="class12" name="class" value="Class XII">
+            <label for="class12" style="display: inline;">Class XII</label>
+
+            <label for="stream">Select Stream:</label>
+            <select name="stream" id="stream">
+                <option value="Science">Science</option>
+                <option value="Commerce">Commerce</option>
+                <option value="Arts">Arts</option>
+                <option value="online">online</option>
+            </select>
+
+            <label for="city">Select Your City:</label>
+            <select name="city" id="city">
+                <option value="Pune">Pune</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Sangola">Sangola</option>
+                <option value="Nashik">Nashik</option>
+                <option value="Nagpur">Nagpur</option>
+                <option value="Amravati">Amravati</option>
+                <option value="C.sambhajinagr">C.sambhajinagar</option>
+                <option value="solapur">solapur</option>
+                <option value="kolhapur">kolapur</option>
+                <option value="jalgaon">jalgaon</option>
+                <option value="akola">akola</option>
+                <option value="ahilyanagar">ahilyanagr</option>
+                <option value="beed">beed</option>
+                <option value="nanded">nanded</option>
+                <option value="latur">latur</option>
+                <option value="jalana">jalana</option>
+                <option value="parabhani">parabhani</option>
+                <option value="vashim">vashim</option>
+                <option value="raygad">raygad</option>
+                <option value="sindudurg">sindudurg</option>
+
+            </select>
+
+            <label for="feedback">Feedback:</label>
+            <textarea name="feedback" id="feedback" rows="5" placeholder="Please give your feedback"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        function goToThankYouPage(event) {
+            event.preventDefault(); // stop default form action 
+            window.location.href = "thankyou.html"; // go to thank you page
+        }
+    </script>
+</body>
+</html>
